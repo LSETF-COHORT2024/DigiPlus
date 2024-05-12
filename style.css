@@ -1,0 +1,424 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  height: 64px;
+}
+.menu {
+  display: flex;
+  gap: 16px;
+  height: 32px;
+}
+.menu a{
+  text-decoration: none;
+  color: #2B2B2B;
+
+}
+.chat a{
+  text-decoration: none;
+  color: #fff;
+  background-color: #017C6D;
+  font-size: smaller;
+  padding: 10px;
+  border-radius: 5px;
+}
+.menu-icon {
+  display: none;
+}
+
+/* hamburger */
+/* Font Awesome Styles */
+.menu-icon {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 10px 20px;
+  }
+
+  #logo img {
+    height: 30px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .chat {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+
+
+
+
+
+/* Main */
+main {
+  padding: 0 150px;
+}
+
+/* About Us Section */
+.about-us{
+  display: flex;
+  height: 520px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  gap: 100px;
+  width: 100%;
+}
+ .about-us .left-card {
+  width: 35%;
+}
+.about-us .right-card{
+  width: 60%;
+}
+.right-card h3 {
+  color: #2B2B2B;
+  font-weight: 400;
+  font-size: 24px;
+}
+.right-card .header {
+  color: #017C6D;
+  font-weight: 600;
+  font-size: 25px;
+}
+.right-card p {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-us {
+    /* flex-direction: ; Change flex direction to column for smaller screens */
+    height: auto;  /* Allow content to determine height */
+    margin-top: 50px; /* Adjust margin top for smaller screens */
+    gap: 20px; /* Reduce gap between elements */
+    /* margin-bottom: 240px; */
+    font-size: smaller;
+    width: 200%;
+
+  }
+  .about-us .left-card{
+    display: none;
+  }
+  .about-us .right-card {
+    width: 100%; /* Full width for both left and right cards */
+  }
+
+  .right-card .header {
+    font-size: 28px; /* Decrease header font size */
+  }
+
+  .right-card p {
+    font-size: 14px; /* Decrease paragraph font size */
+  }
+}
+
+
+/* Committment */
+/* Desktop Styles */
+.commitment {
+  display: flex;
+  flex-direction: row-reverse; /* Reverse the order of flex items */
+  height: 520px;
+  justify-content: space-between;
+  margin-top: 100px;
+  gap: 50px;
+  /* width: 200px; */
+}
+
+.commitment .left-card {
+  width: 35%;
+  height: 360px;
+}
+
+.commitment .right-card {
+  width: 60%;
+  /* height: 352px; */
+}
+
+.commitment .right-card h3 {
+  color: #2B2B2B;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.commitment .right-card .header {
+  color: #017C6D;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.commitment .right-card p {
+  font-size: 16px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .commitment {
+    flex-direction: column; /* Change flex direction to column for smaller screens */
+    height: auto; /* Allow content to determine height */
+    /* margin-top: 50px; Adjust margin top for smaller screens */
+    /* gap: 20px; */
+    width: 200%;
+    font-size: smaller;
+  }
+
+  .commitment .right-card{
+    width: 200px;
+  }
+  .commitment .left-card {
+      display: none;
+  }
+
+  .right-card .header {
+    font-size: 28px; /* Decrease header font size */
+  }
+
+  .right-card p {
+    font-size: 14px; /* Decrease paragraph font size */
+  }
+}
+
+/* Client Reviews */
+.client-reviews{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 479px;
+  margin-top: 100px;
+}
+.client-reviews h3{
+  color: #017C6D;
+}
+.cards-client-reviews {
+  height: 379px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.card-client-reviews{
+  height: 363px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  width: 285px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+}
+.card-review-image{
+  display: flex;
+  flex-direction: column;
+}
+.card-review-image img{
+  border-radius: 50%;
+  align-self: center;
+}
+.cards-client-reviews p {
+  width: 237px;
+  height: 120px;
+}
+.rating .fas {
+  color: gold; /* Change star color */
+  font-size: 24px; /* Change star size */
+}
+
+@media only screen and (max-width: 600px) {
+  .cards-client-reviews {
+    height: 379px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+  }
+}
+
+/* Contact Us */
+.contact-us {
+  height: 950px;
+  padding-top: 100px;
+  width: 100%;
+}
+.contact h3 {
+  color: #017C6D;
+  font-weight: 600;
+  text-align: center;
+}
+.contact-us p{
+  font-weight: 400;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.message-bar {
+  grid-column: 1 / span 2;
+  height: 445px;
+}
+#message {
+  height: 405px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #5C5C5C;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: calc(100% - 16px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #999; /* Placeholder text color */
+    font-weight: 200; /* Placeholder font weight */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #017C6D;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 200%;
+}
+
+button:hover {
+  background-color: #017C6D;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-us{
+    display: none;
+  }
+}
+
+/* Footer */
+footer{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.footer-cards {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 150px;
+}
+.customer-support {
+  font-weight: bold;
+}
+.customer-support #phone{
+  font-weight: lighter;
+}
+.customer-support #enquire{
+  font-weight: lighter;
+  color: #0099CC;
+}
+.customer-support #location{
+  font-weight: lighter;
+}
+
+@media only screen and (max-width: 768px) {
+  footer{
+    margin-top: 500px;
+  }
+  .footer-cards{
+    display: flex;
+    flex-direction: column;
+    margin-top: 600px;
+    gap: 30px;
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 150px; 
+}
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.icons {
+  display: flex;
+  gap: 10px;
+}
+.copyright{
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 768px) {
+  .social-icons{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 100px 0;
+  }
+  .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  .social img {
+    display: none;
+  }
+  .copyright {
+    text-align: center;
+  }
+}
