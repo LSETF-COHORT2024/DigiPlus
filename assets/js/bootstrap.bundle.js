@@ -1,6 +1,10 @@
 /*!
   * Bootstrap v5.3.3 (https://getbootstrap.com/)
   * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+
+  * Bootstrap v5.3.2 (https://getbootstrap.com/)
+  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -210,6 +214,7 @@
   const reflow = element => {
     element.offsetHeight; // eslint-disable-line no-unused-expressions
   };
+
   const getjQuery = () => {
     if (window.jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
       return window.jQuery;
@@ -649,6 +654,9 @@
 
   const VERSION = '5.3.3';
 
+  const VERSION = '5.3.2';
+
+
   /**
    * Class definition
    */
@@ -728,9 +736,15 @@
       if (hrefAttribute.includes('#') && !hrefAttribute.startsWith('#')) {
         hrefAttribute = `#${hrefAttribute.split('#')[1]}`;
       }
+
       selector = hrefAttribute && hrefAttribute !== '#' ? hrefAttribute.trim() : null;
     }
     return selector ? selector.split(',').map(sel => parseSelector(sel)).join(',') : null;
+
+      selector = hrefAttribute && hrefAttribute !== '#' ? parseSelector(hrefAttribute.trim()) : null;
+    }
+    return selector;
+
   };
   const SelectorEngine = {
     find(selector, element = document.documentElement) {
